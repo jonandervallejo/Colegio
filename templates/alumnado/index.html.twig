@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+    {% block title %}
+        {{ titulo }}
+    {% endblock %}
+
+    {% block contenido %}
+        <h1>{{ titulo }}</h1>
+        {% if alumnado %}
+            {% include 'alumnado/_tablaAlumnado.html.twig' with {'alumnado' : alumnado} %}
+        {% endif %}
+    {% endblock %}
